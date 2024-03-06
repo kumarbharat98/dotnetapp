@@ -18,11 +18,18 @@ jobs:
         with:
           dotnet-version: '7.0.x'
 
+      - name: Restore dependencies
+        run: |
+          dotnet restore
+
       - name: List .csproj files
         run: |
           for /r /d %%i in (*.csproj) do (
             echo %%i
           )
+        shell: powershell
+        env:
+          DOTNET_ROOT: C:\Users\runneradmin\AppData\Local\Microsoft\dotnet
 
       - name: Build and Publish
         run: |
@@ -30,6 +37,9 @@ jobs:
             dotnet build --configuration Release "%%i"
             dotnet publish -c Release -o ./publish "%%i"
           )
+        shell: powershell
+        env:
+          DOTNET_ROOT: C:\Users\runneradmin\AppData\Local\Microsoft\dotnet
           
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
