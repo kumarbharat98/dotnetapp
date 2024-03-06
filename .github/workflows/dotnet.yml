@@ -20,13 +20,12 @@ jobs:
 
       - name: Restore dependencies and build projects
         run: |
-          dotnet restore ""
+          dotnet restore
           dotnet build --configuration Release "**/*.csproj"
-          dotnet publish -c Release -o ./publish/**/*.csproj"
+          dotnet publish -c Release -o ./publish "**/*.csproj"
           
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: dotnet-app
-          path: Artifact
-          
+          path: ./publish
