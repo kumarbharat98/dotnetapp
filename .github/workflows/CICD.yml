@@ -18,14 +18,10 @@ jobs:
         with:
           dotnet-version: '7.0.x'
 
-      - name: Restore dependencies
-        run: |
-          dotnet restore
-
       - name: Build and Publish
         run: |
           dotnet build --configuration Release "kumarbharat98/dotnetapp/tree/master/*.csproj"
-          dotnet publish -c Release -o ./publish "kumarbharat98/dotnetapp/tree/master*.csproj"
+          dotnet publish -c Release -o ./publish "kumarbharat98/dotnetapp/tree/master/*.csproj"
           
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
