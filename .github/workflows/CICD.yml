@@ -18,14 +18,18 @@ jobs:
         with:
           dotnet-version: '7.0.x'
 
-      - name: Restore dependencies
+      - name: List .csproj files
         run: |
-          dotnet restore
+          for /r /d %%i in (*.csproj) do (
+            echo %%i
+          )
 
       - name: Build and Publish
         run: |
-          dotnet build --configuration Release "Path/To/Your/Project/*.csproj"
-          dotnet publish -c Release -o ./publish "Path/To/Your/Project/*.csproj"
+          for /r /d %%i in (*.csproj) do (
+            dotnet build --configuration Release "%%i"
+            dotnet publish -c Release -o ./publish "%%i"
+          )
           
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
