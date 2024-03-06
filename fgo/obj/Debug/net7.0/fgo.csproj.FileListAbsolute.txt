@@ -1,0 +1,15 @@
+E:\CI\fgo\bin\Debug\net7.0\fgo.exe
+E:\CI\fgo\bin\Debug\net7.0\fgo.deps.json
+E:\CI\fgo\bin\Debug\net7.0\fgo.runtimeconfig.json
+E:\CI\fgo\bin\Debug\net7.0\fgo.dll
+E:\CI\fgo\bin\Debug\net7.0\fgo.pdb
+E:\CI\fgo\obj\Debug\net7.0\fgo.csproj.AssemblyReference.cache
+E:\CI\fgo\obj\Debug\net7.0\fgo.GeneratedMSBuildEditorConfig.editorconfig
+E:\CI\fgo\obj\Debug\net7.0\fgo.AssemblyInfoInputs.cache
+E:\CI\fgo\obj\Debug\net7.0\fgo.AssemblyInfo.cs
+E:\CI\fgo\obj\Debug\net7.0\fgo.csproj.CoreCompileInputs.cache
+E:\CI\fgo\obj\Debug\net7.0\fgo.dll
+E:\CI\fgo\obj\Debug\net7.0\refint\fgo.dll
+E:\CI\fgo\obj\Debug\net7.0\fgo.pdb
+E:\CI\fgo\obj\Debug\net7.0\fgo.genruntimeconfig.cache
+E:\CI\fgo\obj\Debug\net7.0\ref\fgo.dll
