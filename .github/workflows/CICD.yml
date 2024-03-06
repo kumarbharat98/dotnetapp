@@ -18,10 +18,6 @@ jobs:
         with:
           dotnet-version: '7.0.x'
 
-      - name: Restore dependencies
-        run: |
-          dotnet restore
-
       - name: List .csproj files
         run: |
           for /r /d %%i in (*.csproj) do (
