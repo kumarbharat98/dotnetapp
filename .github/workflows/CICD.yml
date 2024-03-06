@@ -21,21 +21,22 @@ jobs:
       - name: List .csproj files
         run: |
           for /r /d %%i in (*.csproj) do (
-            echo %%i
+          echo %%i
           )
-        shell: powershell
+        shell: cmd
         env:
-          DOTNET_ROOT: C:\Users\runneradmin\AppData\Local\Microsoft\dotnet
+         DOTNET_ROOT: C:\Users\runneradmin\AppData\Local\Microsoft\dotnet
 
       - name: Build and Publish
         run: |
           for /r /d %%i in (*.csproj) do (
-            dotnet build --configuration Release "%%i"
-            dotnet publish -c Release -o ./publish "%%i"
-          )
-        shell: powershell
+          dotnet build --configuration Release "%%i"
+          dotnet publish -c Release -o ./publish "%%i"
+            )
+        shell: cmd
         env:
-          DOTNET_ROOT: C:\Users\runneradmin\AppData\Local\Microsoft\dotnet
+         DOTNET_ROOT: C:\Users\runneradmin\AppData\Local\Microsoft\dotnet
+     
           
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
